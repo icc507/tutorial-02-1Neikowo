@@ -22,22 +22,9 @@ def insertaEnArbolBinario(arbol,numero):
   else:
     insertaEnArbolBinario(arbol[3],numero)
 
-def estaEnArbolBinario(arbol,numero):
-	if arbol==[]:
-		return False
-	elif numero==arbol[0]:
-		return True	
-	elif numero<arbol[0]:
-		return estaEnArbolBinario(arbol[1],numero)
-	else:
-		return estaEnArbolBinario(arbol[2],numero)
-
-
 t = (input().split())
 w = arbolBinario(int(t[0]))
 t.pop(0)
 for i in range(len(t)):
   insertaEnArbolBinario(w,int(t[i]))
-
-print("El árbol")
 print(w)
